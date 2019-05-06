@@ -1,0 +1,52 @@
+﻿
+@model IEnumerable<DynamicForm.Models.Form>
+@{
+    Layout = null;
+}
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container" style="margin-top:%10">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+            <tr>
+                <th>
+                    @Html.Label("Ad")
+                </th>
+                <th>
+                    @Html.Label("Soyad")
+                </th>
+                <th>
+                    @Html.Label("Yas")
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.soyad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.yas)
+                    </td>
+
+                </tr>
+            }
+
+        </thead>
+
+
+       
+    </table>
+</div>
+
+
+
+
+
